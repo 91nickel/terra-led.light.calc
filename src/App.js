@@ -70,7 +70,7 @@ function App () {
     }, [])
 
     function onChange ({target}) {
-        console.log('onChange', target)
+        // console.log('onChange', target)
         let {name, value} = target
         value = Math.round(value * 100) / 100
         setValues(prevState => ({...prevState, [name]: +value}))

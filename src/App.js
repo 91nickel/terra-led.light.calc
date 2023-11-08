@@ -84,7 +84,7 @@ function App () {
 
     const square = Math.round(values.a * values.b * 100) / 100
     const index = Math.round((square / ((values.h - values.h1) * (values.a + values.b))) * 100) / 100
-    console.log('index', index)
+    // console.log('index', index)
     const illumination = illuminations[values.illumination].value
     const lamp = lamps[values.lamp]
     const usage = (lamp.usage.find(r => r.index >= index) || lamp.usage[lamp.usage.length - 1]).value[values.reflection]

@@ -70,7 +70,7 @@ function App () {
     }, [])
 
     function onChange ({target}) {
-        // console.log('onChange', target)
+        console.log('onChange', target)
         let {name, value} = target
         value = Math.round(value * 100) / 100
         setValues(prevState => ({...prevState, [name]: +value}))
@@ -84,15 +84,15 @@ function App () {
 
     const square = Math.round(values.a * values.b * 100) / 100
     const index = Math.round((square / ((values.h - values.h1) * (values.a + values.b))) * 100) / 100
+    console.log('index', index)
     const illumination = illuminations[values.illumination].value
     const lamp = lamps[values.lamp]
-    const usage = lamp.usage.find(r => r.index >= index).value[values.reflection]
+    const usage = (lamp.usage.find(r => r.index >= index) || lamp.usage[lamp.usage.length - 1]).value[values.reflection]
     const multiplier = multipliers[values.multiplier]
     const MF = 1 / multiplier.value
 
     const count = Math.ceil((illumination * square * 100) / (usage * lamp.efficiency * values.flow * MF))
 
-    // console.log('index', index)
     // console.log('usage', usage)
     // console.log('count', count)
 

@@ -233,6 +233,11 @@ function App () {
                             </button>
                         </div>
                     </div>
+                    <div className="row header my-3">
+                        <div className="col-12">
+                            <b>Параметры освещения</b>
+                        </div>
+                    </div>
                     {/*<div className="row header my-3">*/}
                     {/*    <div className="col-12">*/}
                     {/*        <b>Светильник</b>*/}
@@ -268,11 +273,6 @@ function App () {
                             >
                                 +
                             </button>
-                        </div>
-                    </div>
-                    <div className="row header my-3">
-                        <div className="col-12">
-                            <b>Параметры освещения</b>
                         </div>
                     </div>
                     <div className="row input mb-3">

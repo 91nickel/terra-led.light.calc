@@ -97,263 +97,286 @@ function App () {
     // console.log('count', count)
 
     return (
-        <div id="light-calc" className="app">
-            <div className="container">
-                <div className="row">
-                    <form className="col-12">
-                        <div className="row header">
-                            <div className="col-12">
-                                <b>Параметры помещения</b>
-                            </div>
+        <div className="container">
+            <div className="row mb-3">
+                <form className="col-12">
+                    <div className="row header my-3">
+                        <div className="col-12">
+                            <b>Параметры помещения</b>
                         </div>
-                        <div className="row">
-                            <div className="col-6">
-                                <label htmlFor="input-length" className="form-label">
-                                    Длина (м)
-                                </label>
-                            </div>
-                            <div className="col-6 d-flex">
-                                <button
-                                    type="button"
-                                    className="btn btn-light"
-                                    onClick={() => onIncrement('a', -0.5)}
-                                >
-                                    -
-                                </button>
-                                <input
-                                    name="a"
-                                    type="number"
-                                    className="form-control"
-                                    id="input-length"
-                                    step="0.5"
-                                    value={values.a}
-                                    onInput={onChange}
-                                />
-                                <button
-                                    type="button"
-                                    className="btn btn-light"
-                                    onClick={() => onIncrement('a', 0.5)}
-                                >
-                                    +
-                                </button>
-                            </div>
+                    </div>
+                    <div className="row input mb-3">
+                        <div className="col-6">
+                            <label htmlFor="input-length" className="form-label">
+                                Длина (м)
+                            </label>
                         </div>
-                        <div className="row">
-                            <div className="col-6">
-                                <label htmlFor="input-width" className="form-label">
-                                    Ширина (м)
-                                </label>
-                            </div>
-                            <div className="col-6 d-flex">
-                                <button
-                                    type="button"
-                                    className="btn btn-light"
-                                    onClick={() => onIncrement('b', -0.5)}
-                                >
-                                    -
-                                </button>
-                                <input
-                                    name="b"
-                                    type="number"
-                                    className="form-control"
-                                    id="input-width"
-                                    step="0.5"
-                                    value={values.b}
-                                    onInput={onChange}
-                                />
-                                <button
-                                    type="button"
-                                    className="btn btn-light"
-                                    onClick={() => onIncrement('b', 0.5)}
-                                >
-                                    +
-                                </button>
-                            </div>
+                        <div className="col-6 d-flex">
+                            <button
+                                type="button"
+                                className="btn btn-light"
+                                onClick={() => onIncrement('a', -0.5)}
+                            >
+                                -
+                            </button>
+                            <input
+                                name="a"
+                                type="number"
+                                className="form-control text-center"
+                                id="input-length"
+                                step="0.5"
+                                value={values.a}
+                                onInput={onChange}
+                            />
+                            <button
+                                type="button"
+                                className="btn btn-light"
+                                onClick={() => onIncrement('a', 0.5)}
+                            >
+                                +
+                            </button>
                         </div>
-                        <div className="row">
-                            <div className="col-6">
-                                <label htmlFor="input-height" className="form-label">
-                                    Высота (м)
-                                </label>
-                            </div>
-                            <div className="col-6 d-flex">
-                                <button
-                                    type="button"
-                                    className="btn btn-light"
-                                    onClick={() => onIncrement('h', -0.1)}
-                                >
-                                    -
-                                </button>
-                                <input
-                                    name="h"
-                                    type="number"
-                                    className="form-control"
-                                    id="input-height"
-                                    step="0.1"
-                                    value={values.h}
-                                    onInput={onChange}
-                                />
-                                <button
-                                    type="button"
-                                    className="btn btn-light"
-                                    onClick={() => onIncrement('h', 0.1)}
-                                >
-                                    +
-                                </button>
-                            </div>
+                    </div>
+                    <div className="row input mb-3">
+                        <div className="col-6">
+                            <label htmlFor="input-width" className="form-label">
+                                Ширина (м)
+                            </label>
                         </div>
-                        <div className="row">
-                            <div className="col-6">
-                                <label htmlFor="input-work-height" className="form-label">
-                                    Высота рабочей поверхности (м)
-                                </label>
-                            </div>
-                            <div className="col-6 d-flex">
-                                <button
-                                    type="button"
-                                    className="btn btn-light"
-                                    onClick={() => onIncrement('h1', -0.1)}
-                                >
-                                    -
-                                </button>
-                                <input
-                                    name="h1"
-                                    type="number"
-                                    className="form-control"
-                                    id="input-work-height"
-                                    step="0.1"
-                                    value={values.h1}
-                                    onInput={onChange}
-                                />
-                                <button
-                                    type="button"
-                                    className="btn btn-light"
-                                    onClick={() => onIncrement('h1', 0.1)}
-                                >
-                                    +
-                                </button>
-                            </div>
+                        <div className="col-6 d-flex">
+                            <button
+                                type="button"
+                                className="btn btn-light"
+                                onClick={() => onIncrement('b', -0.5)}
+                            >
+                                -
+                            </button>
+                            <input
+                                name="b"
+                                type="number"
+                                className="form-control text-center"
+                                id="input-width"
+                                step="0.5"
+                                value={values.b}
+                                onInput={onChange}
+                            />
+                            <button
+                                type="button"
+                                className="btn btn-light"
+                                onClick={() => onIncrement('b', 0.5)}
+                            >
+                                +
+                            </button>
                         </div>
-                        <div className="row">
-                            <div className="col-6">
-                                <label htmlFor="select-reflection" className="form-label">
-                                    Коэффициенты отражающей поверхности (Потолок / Стены / Пол)
-                                </label>
-                            </div>
-                            <div className="col-6 d-flex">
-                                <select
-                                    name="reflection"
-                                    id="select-reflection"
-                                    className="form-select"
-                                    value={values.reflection}
-                                    onChange={onChange}
-                                >
-                                    {
-                                        reflections.map((r, i) => {
-                                            return (
-                                                <option value={i} key={i}>{`${r.name} (${r.value.join('/')})`}</option>
-                                            )
-                                        })
-                                    }
-                                </select>
-                            </div>
+                    </div>
+                    <div className="row input mb-3">
+                        <div className="col-6">
+                            <label htmlFor="input-height" className="form-label">
+                                Высота (м)
+                            </label>
                         </div>
-                        <div className="row header">
-                            <div className="col-12">
-                                <b>Параметры освещения</b>
-                            </div>
+                        <div className="col-6 d-flex">
+                            <button
+                                type="button"
+                                className="btn btn-light"
+                                onClick={() => onIncrement('h', -0.1)}
+                            >
+                                -
+                            </button>
+                            <input
+                                name="h"
+                                type="number"
+                                className="form-control text-center"
+                                id="input-height"
+                                step="0.1"
+                                value={values.h}
+                                onInput={onChange}
+                            />
+                            <button
+                                type="button"
+                                className="btn btn-light"
+                                onClick={() => onIncrement('h', 0.1)}
+                            >
+                                +
+                            </button>
                         </div>
-                        <div className="row">
-                            <div className="col-6">
-                                <label htmlFor="select-illumination" className="form-label">
-                                    Уровень освещенности (лк)
-                                </label>
-                            </div>
-                            <div className="col-6 d-flex">
-                                <select
-                                    name="illumination"
-                                    id="select-multiplier"
-                                    className="form-select"
-                                    value={values.illumination}
-                                    onChange={onChange}
-                                >
-                                    {
-                                        illuminations.map((m, i) => {
-                                                return (<option value={i} key={i}>{`${m.name} (${m.value} лк)`}</option>)
-                                            }
+                    </div>
+                    <div className="row input mb-3">
+                        <div className="col-6">
+                            <label htmlFor="input-work-height" className="form-label">
+                                Поверхность (м)
+                            </label>
+                        </div>
+                        <div className="col-6 d-flex">
+                            <button
+                                type="button"
+                                className="btn btn-light"
+                                onClick={() => onIncrement('h1', -0.1)}
+                            >
+                                -
+                            </button>
+                            <input
+                                name="h1"
+                                type="number"
+                                className="form-control text-center"
+                                id="input-work-height"
+                                step="0.1"
+                                value={values.h1}
+                                onInput={onChange}
+                            />
+                            <button
+                                type="button"
+                                className="btn btn-light"
+                                onClick={() => onIncrement('h1', 0.1)}
+                            >
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    {/*<div className="row header my-3">*/}
+                    {/*    <div className="col-12">*/}
+                    {/*        <b>Светильник</b>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+                    <div className="row input mb-3">
+                        <div className="col-6">
+                            <label htmlFor="input-height" className="form-label">
+                                Световой поток светильника (лм)
+                            </label>
+                        </div>
+                        <div className="col-6 d-flex">
+                            <button
+                                type="button"
+                                className="btn btn-light"
+                                onClick={() => onIncrement('flow', -100)}
+                            >
+                                -
+                            </button>
+                            <input
+                                name="flow"
+                                type="number"
+                                className="form-control text-center"
+                                id="input-flow"
+                                step="100"
+                                value={values.flow}
+                                onInput={onChange}
+                            />
+                            <button
+                                type="button"
+                                className="btn btn-light"
+                                onClick={() => onIncrement('flow', 100)}
+                            >
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div className="row header my-3">
+                        <div className="col-12">
+                            <b>Параметры освещения</b>
+                        </div>
+                    </div>
+                    <div className="row input mb-3">
+                        <div className="col-12 col-md-6">
+                            <label htmlFor="select-reflection" className="form-label">
+                                Коэффициенты отражения (Потолок / Стены / Пол)
+                            </label>
+                        </div>
+                        <div className="col-12 col-md-6 d-flex">
+                            <select
+                                name="reflection"
+                                id="select-reflection"
+                                className="form-select"
+                                value={values.reflection}
+                                onChange={onChange}
+                            >
+                                {
+                                    reflections.map((r, i) => {
+                                        return (
+                                            <option value={i} key={i}>{`${r.name} (${r.value.join('/')})`}</option>
                                         )
-                                    }
-                                </select>
-                            </div>
+                                    })
+                                }
+                            </select>
                         </div>
-                        <div className="row">
-                            <div className="col-6">
-                                <label htmlFor="select-multiplier" className="form-label">
-                                    Коэффициент запаса
-                                </label>
-                            </div>
-                            <div className="col-6">
-                                <select
-                                    name="multiplier"
-                                    id="select-multiplier"
-                                    className="form-select"
-                                    value={values.multiplier}
-                                    onChange={onChange}
-                                >
-                                    {
-                                        multipliers.map((m, i) => {
-                                            return (<option value={i} key={i}>{`${m.name} (${m.value})`}</option>)
-                                        })
-                                    }
-                                </select>
-                            </div>
+                    </div>
+                    <div className="row input mb-3">
+                        <div className="col-12 col-md-6">
+                            <label htmlFor="select-illumination" className="form-label">
+                                Уровень освещенности (лк)
+                            </label>
                         </div>
-                        <div className="row header">
-                            <div className="col-12">
-                                <b>Светильник</b>
-                            </div>
+                        <div className="col-12 col-md-6 d-flex">
+                            <select
+                                name="illumination"
+                                id="select-multiplier"
+                                className="form-select"
+                                value={values.illumination}
+                                onChange={onChange}
+                            >
+                                {
+                                    illuminations.map((m, i) => {
+                                            return (<option value={i} key={i}>{`${m.name} (${m.value} лк)`}</option>)
+                                        }
+                                    )
+                                }
+                            </select>
                         </div>
-                        <div className="row">
-                            <div className="col-6">
-                                <label htmlFor="input-height" className="form-label">
-                                    Световой поток светильника (лм)
-                                </label>
-                            </div>
-                            <div className="col-6 d-flex">
-                                <button
-                                    type="button"
-                                    className="btn btn-light"
-                                    onClick={() => onIncrement('flow', -100)}
-                                >
-                                    -
-                                </button>
-                                <input
-                                    name="flow"
-                                    type="number"
-                                    className="form-control"
-                                    id="input-flow"
-                                    step="100"
-                                    value={values.flow}
-                                    onInput={onChange}
-                                />
-                                <button
-                                    type="button"
-                                    className="btn btn-light"
-                                    onClick={() => onIncrement('flow', 100)}
-                                >
-                                    +
-                                </button>
-                            </div>
+                    </div>
+                    <div className="row input mb-3">
+                        <div className="col-12 col-md-6">
+                            <label htmlFor="select-multiplier" className="form-label">
+                                Коэффициент запаса
+                            </label>
                         </div>
-                    </form>
+                        <div className="col-12 col-md-6 d-flex">
+                            <select
+                                name="multiplier"
+                                id="select-multiplier"
+                                className="form-select"
+                                value={values.multiplier}
+                                onChange={onChange}
+                            >
+                                {
+                                    multipliers.map((m, i) => {
+                                        return (<option value={i} key={i}>{`${m.name} (${m.value})`}</option>)
+                                    })
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div className="row">
+                <div className="col-12 col-md-3">
+                    <div className="card bg-light mb-3">
+                        <div className="card-body d-flex flex-column align-items-center">
+                            <h5>Площадь</h5>
+                            <b className="card-text">{square} кв.м.</b>
+                        </div>
+                    </div>
                 </div>
-                <div className="row">
-                    <div className="col-12">
-                        <h2>Светильник: {lamps[values.lamp].name} ({lamps[values.lamp].flow} лм)</h2>
-                        <h2>Площадь {square} кв.м.</h2>
-                        <h2>Индекс помещения: {index}</h2>
-                        <h2>Коэффициент использования: {usage}</h2>
-                        <h2>Количество светильников: {count}</h2>
+                <div className="col-12 col-md-3">
+                    <div className="card bg-light mb-3">
+                        <div className="card-body d-flex flex-column align-items-center">
+                            <h5>Индекс</h5>
+                            <b className="card-text">{index}</b>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-12 col-md-3">
+                    <div className="card bg-light mb-3">
+                        <div className="card-body d-flex flex-column align-items-center">
+                            <h5>Коэффициент</h5>
+                            <b className="card-text">{usage}</b>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-12 col-md-3">
+                    <div className="card bg-light mb-3">
+                        <div className="card-body d-flex flex-column align-items-center">
+                            <h5>Количество</h5>
+                            <b className="card-text">{count}</b>
+                        </div>
                     </div>
                 </div>
             </div>

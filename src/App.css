@@ -1,6 +1,37 @@
+#light-calc {
+    max-width: 958px;
+}
+
 #light-calc input::-webkit-outer-spin-button,
 #light-calc input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
+
+#light-calc label {
+    width: 100%;
+}
+
+#light-calc input[type=number] {
+    max-width: 100px;
+}
+
+#light-calc select {
+    /*max-width: 300px;*/
+}
+
+#light-calc .row.input > *:first-child {
+
+}
+
+#light-calc .row.input > *:last-child {
+    justify-content: end;
+}
+
+
+/*@media (max-width: 767px) {*/
+/*    #light-calc label {*/
+/*        text-align: center;*/
+/*    }*/
+/*}*/
